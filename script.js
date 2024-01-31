@@ -53,9 +53,6 @@ function init() {
 
 				const gifElement = document.createElement("img");
 
-				gifElement.style.width = "300px";
-				gifElement.style.height = "200px";
-
 				gifElement.src = gifUrl;
 				gifContainer.append(gifElement);
 			} else {
@@ -69,14 +66,20 @@ function init() {
 		}
 	};
 
-	btnElement.addEventListener("click", () => {
-        getGif()
+btnElement.addEventListener("click", () => {
+    container.classList.add("fadeOut");
+
+    setTimeout(() => {
+        container.classList.remove("fadeOut");
+        getGif();
+
         container.classList.add("slide");
 
         setTimeout(() => {
             container.classList.remove("slide");
         }, 500);
-    });
+    }, 500);
+});
 
 	getJoke();
 	getGif();
