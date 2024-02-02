@@ -30,15 +30,16 @@ body {
 	margin: 20px 0;
 	border-radius: 10px;
 	overflow: hidden;
-	height: 250px;
+	width: 55%;
+	display: flex;
+	justify-content: center;
 	-webkit-box-shadow: 2px 14px 70px 30px rgba(230,147,58,0.79);
 	-moz-box-shadow: 2px 14px 70px 30px rgba(230,147,58,0.79);
 	box-shadow: 2px 14px 70px 30px rgba(230,147,58,0.79);
 }
 
 .gifContainer img {
-	width: 300px;
-	height: 100%;
+	width: 100%;
 }
 
 .jokeContainer {
@@ -94,3 +95,9 @@ a:hover {
     }
 }
 
+
+@media only screen and (max-width: 600px) {
+	.gifContainer  {
+		width: 60%;
+	}
+  }
